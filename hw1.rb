@@ -49,4 +49,7 @@ def scrabble(word)
     z: 10,
   }
   # Q5 CODE HERE
+  chars = word.chars
+  points = chars.map { |c| values[c.to_sym] }
+  return points.inject(0, &:+)
 end
